@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Button } from '../components/atoms/Button';
+import { Button } from '../theme/ChakraTheme/components/Button';
 import './header.css';
 
 type User = {
