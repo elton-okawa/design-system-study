@@ -1,6 +1,5 @@
 import type { Preview } from '@storybook/react';
 import { ChakraTheme } from '../src/theme/ChakraTheme';
-import { MuiTheme } from '../src/theme/MuiTheme';
 import React from 'react';
 
 const preview: Preview = {
@@ -17,9 +16,7 @@ const preview: Preview = {
   decorators: [
     (Story) => (
       <ChakraTheme>
-        <MuiTheme>
-          <Story />
-        </MuiTheme>
+        <Story />
       </ChakraTheme>
     ),
   ],

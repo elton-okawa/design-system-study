@@ -1,11 +1,19 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { Button } from '.';
+import { MuiTheme } from 'theme/MuiTheme';
 
 const meta = {
   title: 'Button/Mui/RectPrimary',
   component: Button,
   tags: ['autodocs'],
+  decorators: [
+    (Story) => (
+      <MuiTheme>
+        <Story />
+      </MuiTheme>
+    ),
+  ],
 } satisfies Meta<typeof Button>;
 
 export default meta;

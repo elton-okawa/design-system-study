@@ -1,4 +1,4 @@
-import { extendTheme, theme as defaultTheme } from '@chakra-ui/react';
+import { extendBaseTheme, theme as defaultTheme } from '@chakra-ui/react';
 
 import { foundations } from './foundations';
 import { semanticTokens } from './semantic-tokens';
@@ -8,7 +8,7 @@ import { components } from './components';
  * See what we can override:
  * https://github.com/chakra-ui/chakra-ui/tree/b6befea762b44f923af42792473963215dc50ed1/packages/components/theme/src
  */
-export const theme = extendTheme(
+export const theme = extendBaseTheme(
   { semanticTokens, components, ...foundations },
   {
     config: defaultTheme.config,
