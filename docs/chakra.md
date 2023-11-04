@@ -16,7 +16,15 @@ select which components to include
 
 https://chakra-ui.com/getting-started#chakrabaseprovider
 
+### Storybook addon
+
+https://chakra-ui.com/getting-started/with-storybook
+
 ## Styling a component
+
+TODO gotcha
+
+- storybook docs, default property must come from destructuring props on argument instead of on code `const Component = ({ value = 'default' }) => {}` to be documented correctly
 
 You have three options:
 

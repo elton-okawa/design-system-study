@@ -27,5 +27,28 @@ const config: Config = {
   docs: {
     autodocs: 'tag',
   },
+  typescript: {
+    // View storybook-doc-gen.md
+    reactDocgenTypescriptOptions: {
+      propFilter: filterOutExternalProps,
+      compilerOptions: {
+        // Optional property handling - optional properties didn't come with correct control such as toggle for boolean
+        // https://github.com/storybookjs/storybook/issues/11146
+        shouldRemoveUndefinedFromOptional: true,
+        allowSyntheticDefaultImports: true,
+        esModuleInterop: true,
+        // END Optional property handling
+      },
+    },
+  },
 };
+
+function filterOutExternalProps(prop: any) {
+  return (
+    !prop.name.startsWith('_') &&
+    prop.name !== 'as' &&
+    !prop.parent?.fileName.includes('node_modules')
+  );
+}
+
 export default config;
