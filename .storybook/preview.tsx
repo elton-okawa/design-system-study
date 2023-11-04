@@ -1,6 +1,5 @@
 import type { Preview } from '@storybook/react';
-import { ChakraTheme } from '../src/theme/ChakraTheme';
-import React from 'react';
+import { theme } from '../src/theme/ChakraTheme/theme';
 
 const preview: Preview = {
   parameters: {
@@ -12,14 +11,10 @@ const preview: Preview = {
       },
     },
     layout: 'centered',
+    chakra: {
+      theme,
+    },
   },
-  decorators: [
-    (Story) => (
-      <ChakraTheme>
-        <Story />
-      </ChakraTheme>
-    ),
-  ],
 };
 
 export default preview;
