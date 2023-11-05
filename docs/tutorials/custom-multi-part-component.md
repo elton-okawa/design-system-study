@@ -17,24 +17,41 @@ The major difference is the nesting level of css styling, for **simple component
 ```ts
 import { createMultiStyleConfigHelpers } from '@chakra-ui/styled-system';
 
-const helpers = createMultiStyleConfigHelpers(['card', 'title']);
-const theme = helpers.defineMultiStyleConfig({
-  baseStyle: {
+const { definePartsStyle, defineMultiStyleConfig } =
+  createMultiStyleConfigHelpers(['card', 'title']);
+
+const baseStyle = definePartsStyle({
+  card: {},
+  title: {},
+});
+
+const sizes = {
+  big: definePartsStyle({
     card: {},
     title: {},
-  },
-  sizes: {
+  }),
+  medium: definePartsStyle({
     card: {},
     title: {},
-  },
-  variants: {
+  }),
+};
+
+const variants = {
+  default: definePartsStyle({
     card: {},
     title: {},
-  },
-  defaultProps: {
+  }),
+  outlined: definePartsStyle({
     card: {},
     title: {},
-  },
+  }),
+};
+
+const theme = defineMultiStyleConfig({
+  baseStyle,
+  sizes,
+  variants,
+  defaultProps: {},
 });
 ```
 
