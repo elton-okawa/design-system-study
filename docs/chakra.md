@@ -2,23 +2,11 @@
 
 ## TODO Write about
 
-### chakra cli
-
-generate theme typing
-
-References:
-
-- https://chakra-ui.com/docs/styled-system/cli
-
 ### `ChakraBaseProvider` and `extendBaseTheme`
 
 select which components to include
 
 https://chakra-ui.com/getting-started#chakrabaseprovider
-
-### Storybook addon
-
-https://chakra-ui.com/getting-started/with-storybook
 
 ## Styling a component
 
@@ -28,9 +16,9 @@ TODO gotcha
 
 You have three options:
 
-- [Style an existing one](./custom-existing-component.md)
-- [Create a new single part component](./custom-single-part-component.md)
-- [Create a new multi part component](./custom-multi-part-component.md)
+- [Style an existing one](./tutorials/custom-existing-component.md)
+- [Create a new single part component](./tutorials/custom-single-part-component.md)
+- [Create a new multi part component](./tutorials/custom-multi-part-component.md)
 
 References
 
