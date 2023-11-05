@@ -1,4 +1,8 @@
-import { extendBaseTheme, theme as defaultTheme } from '@chakra-ui/react';
+import {
+  extendBaseTheme,
+  theme as defaultTheme,
+  Theme,
+} from '@chakra-ui/react';
 
 import { foundations } from './foundations';
 import { semanticTokens } from './semantic-tokens';
@@ -30,4 +34,4 @@ export const theme = extendBaseTheme(
     letterSpacings: {},
     lineHeights: {},
   },
-);
+) as Theme;
