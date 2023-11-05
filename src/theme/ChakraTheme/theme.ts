@@ -1,12 +1,13 @@
-import {
-  extendBaseTheme,
-  theme as defaultTheme,
-  Theme,
-} from '@chakra-ui/react';
+import { extendBaseTheme, theme as defaultTheme } from '@chakra-ui/react';
 
-import { foundations } from './foundations';
+import { Colors, foundations } from './foundations';
 import { semanticTokens } from './semantic-tokens';
-import { components } from './components';
+import { Components, components } from './components';
+
+type ArgTypeTheme = {
+  colors: Colors;
+  components: Components;
+};
 
 /**
  * See what we can override:
@@ -34,4 +35,4 @@ export const theme = extendBaseTheme(
     letterSpacings: {},
     lineHeights: {},
   },
-) as Theme;
+) as ArgTypeTheme;

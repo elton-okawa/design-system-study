@@ -11,3 +11,5 @@ export const components = {
   Tile: tileTheme,
   Card: cardTheme,
 };
+
+export type Components = typeof components;

@@ -19,6 +19,7 @@ export const Default: Story = {
     isDisabled: false,
     isLoading: false,
     leftIcon: <EmailIcon />,
+    colorScheme: 'amber',
   },
 };
 
