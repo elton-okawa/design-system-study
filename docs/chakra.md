@@ -37,3 +37,8 @@ References
 - [Chakra Component Style](https://chakra-ui.com/docs/styled-system/component-style)
 - [Chakra Factory](https://chakra-ui.com/docs/styled-system/chakra-factory)
 - [Chakra Button Code](https://github.com/chakra-ui/chakra-ui/blob/b6befea762b44f923af42792473963215dc50ed1/packages/components/button/src/button.tsx)
+
+Setup guides:
+
+- [Chakra + Storybook](https://chakra-ui.com/getting-started/with-storybook)
+- [Chakra CLI - Generate theme typing](https://chakra-ui.com/docs/styled-system/cli)
