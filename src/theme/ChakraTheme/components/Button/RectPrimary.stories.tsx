@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
+import { EmailIcon } from '@chakra-ui/icons';
 import { Button } from '@chakra-ui/react';
 
 const meta = {
@@ -17,6 +18,7 @@ export const Default: Story = {
     children: 'Button',
     isDisabled: false,
     isLoading: false,
+    leftIcon: <EmailIcon />,
   },
 };
 
