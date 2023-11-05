@@ -1,4 +1,12 @@
-# Creating a custom multi part component
+# Styling a custom multi part component
+
+## Overview
+
+In order to style a custom multi part component, you need to perform the following step by step:
+
+1. Define style for each component part
+2. Add it on theme
+3. Create each component part consuming the styling - you can skip this part if the component already exists
 
 ## Defining component theme
 
@@ -44,6 +52,8 @@ const theme = extendTheme({
 ```
 
 ## Consuming component theme
+
+    Current step is only applicable only if you are creating a new component, if you are styling an existing one, you can skip it.
 
 Create a **style context** to provide styling for children components using `createStylesContext`.
 

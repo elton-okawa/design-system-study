@@ -14,9 +14,8 @@ TODO gotcha
 
 - storybook docs, default property must come from destructuring props on argument instead of on code `const Component = ({ value = 'default' }) => {}` to be documented correctly
 
-You have three options:
+You have two options:
 
-- [Style an existing one](./tutorials/custom-existing-component.md)
 - [Create a new single part component](./tutorials/custom-single-part-component.md)
 - [Create a new multi part component](./tutorials/custom-multi-part-component.md)
 

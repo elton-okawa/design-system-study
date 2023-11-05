@@ -1,14 +1,28 @@
-# Creating custom single part component
+# Styling a custom single part component
+
+## Overview
+
+In order to style a single part component, you need to perform the following step by step:
+
+1. Define style
+2. Add it on theme
+3. Create a component to consume it - you can skip it if the component already exists
+
+## Step by step
 
 Create style:
 
 ```tsx
-import { defineStyleConfig } from '@chakra-ui/react';
+import { defineStyle, defineStyleConfig } from '@chakra-ui/react';
+
+const baseStyle = defineStyle({});
+const sizes = defineStyle({});
+const variants = defineStyle({});
 
 export const Tile = defineStyleConfig({
-  baseStyle: {}, // Styles for the base style
-  sizes: {}, // Styles for the size variations
-  variants: {}, // Styles for the visual style variations
+  baseStyle, // Styles for the base style
+  sizes, // Styles for the size variations
+  variants, // Styles for the visual style variations
   defaultProps: {}, // The default `size` or `variant` values
 });
 ```
@@ -25,6 +39,8 @@ const theme = extendTheme({
   },
 });
 ```
+
+    The next steps are applicable only if you are creating a new component, if you are styling an existing one, you can skip it.
 
 Create a new component that consumes it:
 
@@ -47,8 +63,8 @@ import React from 'react';
 interface TileProps extends HTMLChakraProps<'div'>, ThemingProps<'Tile'> {}
 
 export const Tile = React.forwardRef<'div', TileProps>((props, ref) => {
-  const { variant, children, ...rest } = props;
-  const styles = useStyleConfig('Tile', { variant });
+  const { variant, size, children, ...rest } = props;
+  const styles = useStyleConfig('Tile', { variant, size });
 
   return (
     <chakra.div ref={ref} {...rest} __css={styles}>
