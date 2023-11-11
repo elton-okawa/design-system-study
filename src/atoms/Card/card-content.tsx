@@ -1,6 +1,6 @@
 import { Flex, HTMLChakraProps, Skeleton } from '@chakra-ui/react';
 import { ReactNode } from 'react';
-import { useLoading } from 'theme/ChakraTheme/core/LoadingProvider/useLoading';
+import { useLoading } from 'core/loading-provider';
 import { CardTitle } from './card-title';
 import { CardDescription } from './card-description';
 

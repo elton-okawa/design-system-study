@@ -1,11 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Tile } from './Tile';
+import { Tile } from './tile';
 import { getThemingArgTypes } from '@chakra-ui/storybook-addon';
-import { theme } from 'theme/ChakraTheme/theme';
+import { theme } from 'theme';
 
 const meta = {
-  title: 'Tile/Chakra/Default',
   component: Tile,
   tags: ['autodocs'],
   argTypes: getThemingArgTypes(theme, 'Tile'),

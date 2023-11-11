@@ -1,4 +1,4 @@
-import { useLoading } from 'theme/ChakraTheme/core/LoadingProvider/useLoading';
+import { useLoading } from 'core/loading-provider';
 import { useCardStyles } from './card-context';
 import { Button, HTMLChakraProps, Skeleton, chakra } from '@chakra-ui/react';
 import React from 'react';

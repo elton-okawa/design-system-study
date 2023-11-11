@@ -8,6 +8,16 @@ select which components to include
 
 https://chakra-ui.com/getting-started#chakrabaseprovider
 
+### Chakra future
+
+https://www.adebayosegun.com/blog/chakra-panda-ark-whats-the-plan
+
+SSR support
+new date picker components
+better styling api
+
+v3 Q4
+
 ## Styling a component
 
 TODO gotcha
@@ -25,7 +35,7 @@ References
 - [Chakra Factory](https://chakra-ui.com/docs/styled-system/chakra-factory)
 - [Chakra Button Code](https://github.com/chakra-ui/chakra-ui/blob/b6befea762b44f923af42792473963215dc50ed1/packages/components/button/src/button.tsx)
 
-Setup guides:
+## Setup guides
 
 - [Chakra + Storybook](https://chakra-ui.com/getting-started/with-storybook)
 - [Chakra CLI - Generate theme typing](https://chakra-ui.com/docs/styled-system/cli)

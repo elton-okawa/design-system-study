@@ -2,7 +2,7 @@ import { extendBaseTheme, theme as defaultTheme } from '@chakra-ui/react';
 
 import { Colors, foundations } from './foundations';
 import { semanticTokens } from './semantic-tokens';
-import { Components, components } from './components';
+import { Components, components } from '../atoms';
 
 type ArgTypeTheme = {
   colors: Colors;

@@ -1,10 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { EmailIcon } from '@chakra-ui/icons';
 import { Button } from '@chakra-ui/react';
 
 const meta = {
-  title: 'Button/Chakra/RectPrimary',
   component: Button,
   tags: ['autodocs'],
 } satisfies Meta<typeof Button>;
@@ -18,8 +16,7 @@ export const Default: Story = {
     children: 'Button',
     isDisabled: false,
     isLoading: false,
-    leftIcon: <EmailIcon />,
-    colorScheme: 'amber',
+    variant: 'pill-secondary',
   },
 };
 

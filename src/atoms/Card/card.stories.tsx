@@ -3,14 +3,13 @@ import { getThemingArgTypes } from '@chakra-ui/storybook-addon';
 
 import { Card } from './card';
 import { Box } from '@chakra-ui/react';
-import { theme } from 'theme/ChakraTheme/theme';
+import { theme } from 'theme';
 import { CardContent } from './card-content';
 import { CardBadge } from './card-badge';
 import { CardButton } from './card-button';
 import { CardTitle } from './card-title';
 
 const meta = {
-  title: 'Card/Chakra/Default',
   component: Card,
   tags: ['autodocs'],
   // argTypes: {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { LoadingContext } from './LoadingContext';
+import { LoadingContext } from './loading-context';
 
 type LoadingProviderProps = {
   loading: boolean;
