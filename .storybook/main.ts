@@ -10,6 +10,9 @@ type Config = StorybookConfig & ChakraAddon;
 
 const config: Config = {
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
+  refs: {
+    '@chakra-ui/react': { disable: true },
+  },
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
