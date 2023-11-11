@@ -10,8 +10,10 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006 --no-open",
     "build-storybook": "storybook build",
+    "test-storybook": "test-storybook --coverage",
     "gen:theme-typings": "chakra-cli tokens src/theme/ChakraTheme/theme.ts",
-    "postinstall": "npm run gen:theme-typings"
+    "postinstall": "npm run gen:theme-typings",
+    "chromatic": "npx chromatic --project-token=$CHROMATIC_PROJECT_TOKEN"
   },
   "engines": {
     "yarn": "please use npm because chakra typing does not work with pnpm",
@@ -30,6 +32,7 @@
   "devDependencies": {
     "@chakra-ui/cli": "^2.4.1",
     "@chakra-ui/storybook-addon": "^5.0.1",
+    "@storybook/addon-coverage": "^0.0.9",
     "@storybook/addon-essentials": "^7.5.1",
     "@storybook/addon-interactions": "^7.5.1",
     "@storybook/addon-links": "^7.5.1",
@@ -37,21 +40,26 @@
     "@storybook/blocks": "^7.5.1",
     "@storybook/react": "^7.5.1",
     "@storybook/react-vite": "^7.5.1",
+    "@storybook/test-runner": "^0.14.0",
     "@storybook/testing-library": "^0.2.2",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
     "@vitejs/plugin-react-swc": "^3.3.2",
+    "chromatic": "^9.0.0",
     "eslint": "^8.45.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
     "eslint-plugin-storybook": "^0.6.15",
+    "nyc": "^15.1.0",
     "prettier": "3.0.3",
     "storybook": "^7.5.1",
     "typescript": "^5.0.2",
     "vite": "^4.4.5",
     "vite-tsconfig-paths": "^4.2.1"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "design-system-study@0.0.0"
 }

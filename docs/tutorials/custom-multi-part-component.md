@@ -6,7 +6,7 @@ In order to style a custom multi part component, you need to perform the followi
 
 1. Define style for each component part
 2. Add it on theme
-3. Create each component part consuming the styling - you can skip this part if the component already exists
+3. Create each component part consuming the styling - you can skip this part if the component already exists in chakra package
 
 ## Defining component theme
 

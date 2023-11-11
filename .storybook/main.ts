@@ -15,6 +15,7 @@ const config: Config = {
     '@storybook/addon-essentials',
     '@storybook/addon-onboarding',
     '@storybook/addon-interactions',
+    '@storybook/addon-coverage',
     '@chakra-ui/storybook-addon',
   ],
   features: {
