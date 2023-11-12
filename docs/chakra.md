@@ -2,27 +2,17 @@
 
 ## TODO Write about
 
+### Components groups
+
+Use `Card.Button` instead of `CardButton` whenever it does not make sense to live outside of a `Card` container for example
+
 ### `ChakraBaseProvider` and `extendBaseTheme`
 
 select which components to include
 
 https://chakra-ui.com/getting-started#chakrabaseprovider
 
-### Chakra future
-
-https://www.adebayosegun.com/blog/chakra-panda-ark-whats-the-plan
-
-SSR support
-new date picker components
-better styling api
-
-v3 Q4
-
 ## Styling a component
-
-TODO gotcha
-
-- storybook docs, default property must come from destructuring props on argument instead of on code `const Component = ({ value = 'default' }) => {}` to be documented correctly
 
 You have two options:
 
