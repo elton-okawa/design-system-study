@@ -11,7 +11,7 @@
     "storybook": "storybook dev -p 6006 --no-open",
     "build-storybook": "storybook build",
     "test-storybook": "test-storybook --coverage",
-    "gen:theme-typings": "chakra-cli tokens src/theme/ChakraTheme/theme.ts",
+    "gen:theme-typings": "chakra-cli tokens src/lib/theme/theme.ts",
     "postinstall": "npm run gen:theme-typings",
     "chromatic": "npx chromatic --project-token=$CHROMATIC_PROJECT_TOKEN"
   },

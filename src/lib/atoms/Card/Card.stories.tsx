@@ -3,7 +3,7 @@ import { getThemingArgTypes } from '@chakra-ui/storybook-addon';
 
 import { Card } from './card';
 import { Box } from '@chakra-ui/react';
-import { theme } from 'theme';
+import { theme } from 'lib/theme';
 import { CardContent } from './card-content';
 import { CardBadge } from './card-badge';
 import { CardButton } from './card-button';

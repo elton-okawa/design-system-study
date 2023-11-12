@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import './App.css';
-import { Button, Stack } from '@chakra-ui/react';
-import { Tile } from 'atoms/Tile';
+import { Tile, Button, Stack } from './lib';
 
 function App() {
   const [count, setCount] = useState(0);

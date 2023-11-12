@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import { Tile } from './tile';
 import { getThemingArgTypes } from '@chakra-ui/storybook-addon';
-import { theme } from 'theme';
+import { theme } from 'lib/theme';
 
 const meta = {
   component: Tile,

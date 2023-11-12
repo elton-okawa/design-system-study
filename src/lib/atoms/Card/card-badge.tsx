@@ -1,4 +1,4 @@
-import { useLoading } from 'core/loading-provider';
+import { useLoading } from 'lib/core/loading-provider';
 import { useCardStyles } from './card-context';
 import { HTMLChakraProps, Skeleton, chakra } from '@chakra-ui/react';
 import React from 'react';

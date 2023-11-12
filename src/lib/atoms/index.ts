@@ -2,11 +2,13 @@ import { buttonTheme } from './Button';
 import { tileTheme } from './Tile';
 import { cardTheme } from './Card';
 import { theme } from '@chakra-ui/theme';
+export { Skeleton, Button, Stack } from '@chakra-ui/react';
+export { Tile } from './Tile';
 
-const { Skeleton } = theme.components;
+const { Skeleton: skeletonTheme } = theme.components;
 
 export const components = {
-  Skeleton,
+  Skeleton: skeletonTheme,
   Button: buttonTheme,
   Tile: tileTheme,
   Card: cardTheme,
