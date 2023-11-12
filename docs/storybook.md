@@ -2,6 +2,23 @@
 
 ## Gotchas
 
+### Default property docs
+
+Storybook automagically reads Typescript code to auto generate docs.
+In order to get default values correctly, we must destructure it on arguments instead of on code:
+
+```tsx
+type ComponentProps {
+  value?: string;
+}
+
+const Component = ({ value = 'default' }: ComponentProps) => {};
+```
+
+References:
+
+- [Storybook - autodocs](https://storybook.js.org/docs/react/writing-docs/autodocs)
+
 ### Component's stories
 
 You can organize your storybook components **implicitly** by folder structure or **explicitly** using `title` property:
