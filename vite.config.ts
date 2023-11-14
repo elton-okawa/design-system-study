@@ -12,6 +12,7 @@ export default defineConfig({
     dts({
       insertTypesEntry: true,
       exclude: ['**/*.stories.tsx'],
+      rollupTypes: true,
     }),
   ],
   build: {
