@@ -1,11 +1,17 @@
 import { useLoading } from 'lib/core/loading-provider';
 import { useCardStyles } from './card-context';
-import { HTMLChakraProps, Skeleton, chakra } from '@chakra-ui/react';
+import {
+  ComponentWithAs,
+  HTMLChakraProps,
+  Skeleton,
+  chakra,
+  forwardRef,
+} from '@chakra-ui/react';
 import React from 'react';
 
 type CardBadgeProps = React.PropsWithChildren<HTMLChakraProps<'div'>>;
 
-export const CardBadge = React.forwardRef<HTMLDivElement, CardBadgeProps>(
+export const CardBadge: ComponentWithAs<'div', CardBadgeProps> = forwardRef(
   ({ children, ...props }, ref) => {
     const styles = useCardStyles();
     const loading = useLoading();

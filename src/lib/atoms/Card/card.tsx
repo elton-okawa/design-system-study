@@ -2,9 +2,10 @@ import {
   HTMLChakraProps,
   ThemingProps,
   chakra,
+  forwardRef,
   useMultiStyleConfig,
+  ComponentWithAs,
 } from '@chakra-ui/react';
-import React from 'react';
 import { LoadingProvider } from 'lib/core/loading-provider';
 import { CardStylesProvider } from './card-context';
 
@@ -13,7 +14,7 @@ type CardProps = HTMLChakraProps<'div'> &
     loading?: boolean;
   };
 
-export const Card = React.forwardRef<HTMLDivElement, CardProps>(
+export const Card: ComponentWithAs<'div', CardProps> = forwardRef(
   ({ size, variant, loading = false, children, ...rest }, ref) => {
     const styles = useMultiStyleConfig('Card', { size, variant });
 

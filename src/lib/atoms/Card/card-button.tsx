@@ -1,12 +1,18 @@
 import { useLoading } from 'lib/core/loading-provider';
 import { useCardStyles } from './card-context';
-import { Button, HTMLChakraProps, Skeleton, chakra } from '@chakra-ui/react';
-import React from 'react';
+import {
+  Button,
+  ComponentWithAs,
+  HTMLChakraProps,
+  Skeleton,
+  chakra,
+  forwardRef,
+} from '@chakra-ui/react';
 
 type CardButtonProps = HTMLChakraProps<'div'>;
 
-export const CardButton = React.forwardRef<HTMLButtonElement, CardButtonProps>(
-  ({ children, ...props }, ref) => {
+export const CardButton: ComponentWithAs<'button', CardButtonProps> =
+  forwardRef(({ children, ...props }, ref) => {
     const styles = useCardStyles();
     const loading = useLoading();
 
@@ -19,5 +25,4 @@ export const CardButton = React.forwardRef<HTMLButtonElement, CardButtonProps>(
         </Skeleton>
       </chakra.div>
     );
-  },
-);
+  });

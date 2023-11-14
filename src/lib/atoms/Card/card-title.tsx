@@ -1,12 +1,16 @@
-import { HTMLChakraProps, chakra } from '@chakra-ui/react';
-import React from 'react';
+import {
+  ComponentWithAs,
+  HTMLChakraProps,
+  chakra,
+  forwardRef,
+} from '@chakra-ui/react';
 import { useCardStyles } from './card-context';
 
 type CardTitleProps = HTMLChakraProps<'p'> & {
   children?: string;
 };
 
-export const CardTitle = React.forwardRef<HTMLParagraphElement, CardTitleProps>(
+export const CardTitle: ComponentWithAs<'p', CardTitleProps> = forwardRef(
   ({ children, ...props }, ref) => {
     const styles = useCardStyles();
 
