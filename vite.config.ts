@@ -27,7 +27,7 @@ export default defineConfig({
     },
     rollupOptions: {
       external: [
-        ...Object.keys(packageJson.devDependencies),
+        ...Object.keys(packageJson.peerDependencies),
         'react/jsx-runtime',
       ], // externalize to not include in package
       output: {
