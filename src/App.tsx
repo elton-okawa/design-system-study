@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './App.css';
-import { Tile, Button, Stack } from './lib';
+import { Tile, Button, Stack } from '../dist';
 
 function App() {
   const [count, setCount] = useState(0);

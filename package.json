@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build:tsc": "tsc",
-    "build": "tsc && vite build",
+    "build": "tsc --p ./tsconfig.build.json && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006 --no-open",
@@ -22,7 +22,12 @@
   },
   "peerDependencies": {
     "react": "^18.x || 17.x",
-    "react-dom": "^18.x || 17.x"
+    "react-dom": "^18.x || 17.x",
+    "@chakra-ui/icons": "^2",
+    "@chakra-ui/react": "^2",
+    "@emotion/react": "^11",
+    "@emotion/styled": "^11",
+    "framer-motion": "^10"
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.1.1",
