@@ -23,7 +23,6 @@ export default defineConfig({
       entry: path.resolve(__dirname, 'lib/index.ts'),
       name: 'Design System Study',
       formats: ['es', 'umd'],
-      fileName: (format) => `design-system-study.${format}.js`,
     },
     rollupOptions: {
       external: [
