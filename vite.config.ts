@@ -12,6 +12,7 @@ export default defineConfig({
     react(),
     dts({
       insertTypesEntry: true,
+      include: ['lib'],
       exclude: ['**/*.stories.tsx'],
       rollupTypes: true,
     }),
@@ -25,13 +26,17 @@ export default defineConfig({
       fileName: (format) => `design-system-study.${format}.js`,
     },
     rollupOptions: {
-      external: Object.keys(packageJson.dependencies), // externalize to not include in package
+      external: [
+        ...Object.keys(packageJson.devDependencies),
+        'react/jsx-runtime',
+      ], // externalize to not include in package
       output: {
         globals: {
           react: 'React',
           'react-dom': 'ReactDOM',
           '@chakra-ui/react': 'ChakraReact',
           '@chakra-ui/icons': 'ChakraIcons',
+          'react/jsx-runtime': 'ReactJSXRuntime',
         },
       },
     },
