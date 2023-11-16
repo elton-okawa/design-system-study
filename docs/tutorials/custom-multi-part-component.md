@@ -87,9 +87,11 @@ On the **part component**:
 
 ```tsx
 import {
+  ComponentWithAs,
   HTMLChakraProps,
   ThemingProps,
   chakra,
+  forwardRef,
   useMultiStyleConfig,
   createStylesContext,
 } from '@chakra-ui/react';
@@ -105,7 +107,7 @@ type CardProps = HTMLChakraProps<'div'> &
     loading?: boolean;
   };
 
-export const Card = React.forwardRef<HTMLDivElement, CardProps>(
+export const Card: ComponentWithAs<'div', CardProps> = forwardRef(
   ({ size, variant, loading = false, children, ...rest }, ref) => {
     const styles = useMultiStyleConfig('MyCardTheme', { size, variant });
 
@@ -122,7 +124,7 @@ type CardTitleProps = HTMLChakraProps<'p'> & {
   children?: string;
 };
 
-export const CardTitle = React.forwardRef<HTMLParagraphElement, CardTitleProps>(
+export const CardTitle: ComponentWithAs<'p', CardTitleProps> = forwardRef(
   ({ children, ...props }, ref) => {
     const styles = useCardStyles();
 
