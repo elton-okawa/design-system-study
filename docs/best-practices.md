@@ -1,5 +1,53 @@
 # Best Practices
 
+### Naming and file structure
+
+We follow [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/) to organize our components:
+
+- **Atoms** - basic building blocks, the HTML tags such as label, input
+- **Molecules** - group of atoms, do one thing and do it well such as card
+- **Organisms** - group of molecules, form a distinct section of an interface such as page header
+
+Naming:
+
+- Component folder **uppercase**, e.g. `Button.tsx`
+- Component stories **uppercase**, e.g. `Button.stories.tsx`
+- Component theme **lowercase**, e.g. `theme.ts`
+- Component part **dash-case**, e.g. `card-button.tsx`
+
+Example:
+
+```
+atoms
+|- Button
+  |- button.tsx
+  |- Button.stories.tsx
+  |- theme.ts
+  |- index.ts
+|- Typography
+molecules
+|- Card
+```
+
+### Composition over single component
+
+Whenever possible prefer creating composable components instead of a single component with options.
+
+View [Composition Docs](./decisions/composition.md) for more info
+
+### Keep related components together
+
+Multi part components only makes sense when used together, by grouping it we make it explicitly.
+
+```tsx
+export const Card = () => {};
+const CardTitle = () => {};
+const CardButton = () => {};
+
+Card.Title = CardTitle;
+Card.Button = CardButton;
+```
+
 ### Create components like chakra library does
 
 Checklist:
