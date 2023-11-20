@@ -9,7 +9,7 @@ import {
 } from '@chakra-ui/react';
 import React from 'react';
 
-type CardBadgeProps = React.PropsWithChildren<HTMLChakraProps<'div'>>;
+export type CardBadgeProps = React.PropsWithChildren<HTMLChakraProps<'div'>>;
 
 export const CardBadge: ComponentWithAs<'div', CardBadgeProps> = forwardRef(
   ({ children, ...props }, ref) => {

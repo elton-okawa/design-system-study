@@ -9,7 +9,7 @@ import {
   forwardRef,
 } from '@chakra-ui/react';
 
-type CardButtonProps = HTMLChakraProps<'div'>;
+export type CardButtonProps = HTMLChakraProps<'div'>;
 
 export const CardButton: ComponentWithAs<'button', CardButtonProps> =
   forwardRef(({ children, ...props }, ref) => {

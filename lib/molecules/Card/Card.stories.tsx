@@ -1,13 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { getThemingArgTypes } from '@chakra-ui/storybook-addon';
 
-import { Card } from './card';
 import { Box } from '@chakra-ui/react';
 import { theme } from 'lib/theme';
-import { CardContent } from './card-content';
-import { CardBadge } from './card-badge';
-import { CardButton } from './card-button';
-import { CardTitle } from './card-title';
+import { Card } from '.';
 
 const meta = {
   component: Card,
@@ -27,26 +23,16 @@ export const Default: Story = {
   render: (args) => {
     return (
       <Card {...args}>
-        <CardContent
+        <Card.Content
           title="Heading"
           description="Paragraph"
           badge={
-            <CardBadge>
+            <Card.Badge>
               <Box w="3.5rem" h="3.5rem" bgColor="teal.200" />
-            </CardBadge>
+            </Card.Badge>
           }
         />
-        <CardButton>Button</CardButton>
-      </Card>
-    );
-  },
-};
-
-export const TitleAsHeading: Story = {
-  render: (args) => {
-    return (
-      <Card {...args}>
-        <CardTitle as="h1">H1 Heading</CardTitle>
+        <Card.Button>Button</Card.Button>
       </Card>
     );
   },

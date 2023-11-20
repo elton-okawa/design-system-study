@@ -6,7 +6,7 @@ import {
 } from '@chakra-ui/react';
 import { useCardStyles } from './card-context';
 
-type CardDescriptionProps = HTMLChakraProps<'p'> & {
+export type CardDescriptionProps = HTMLChakraProps<'p'> & {
   children?: string;
 };
 

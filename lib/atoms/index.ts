@@ -1,6 +1,6 @@
 import { buttonTheme } from './Button';
 import { tileTheme } from './Tile';
-import { cardTheme } from './Card';
+import { cardTheme } from '../molecules/Card';
 import { theme } from '@chakra-ui/theme';
 export { Skeleton, Button, Stack } from '@chakra-ui/react';
 export { Tile } from './Tile';

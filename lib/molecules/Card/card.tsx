@@ -9,7 +9,7 @@ import {
 import { LoadingProvider } from 'lib/core/loading-provider';
 import { CardStylesProvider } from './card-context';
 
-type CardProps = HTMLChakraProps<'div'> &
+export type CardProps = HTMLChakraProps<'div'> &
   ThemingProps<'Card'> & {
     loading?: boolean;
   };

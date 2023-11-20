@@ -4,7 +4,7 @@ import { useLoading } from 'lib/core/loading-provider';
 import { CardTitle } from './card-title';
 import { CardDescription } from './card-description';
 
-type CardContentProps = HTMLChakraProps<'div'> & {
+export type CardContentProps = HTMLChakraProps<'div'> & {
   title: string;
   description: string;
   badge: ReactNode;
