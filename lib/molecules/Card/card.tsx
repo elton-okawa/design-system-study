@@ -11,6 +11,7 @@ import { CardStylesProvider } from './card-context';
 
 export type CardProps = HTMLChakraProps<'div'> &
   ThemingProps<'Card'> & {
+    /** Loading or not */
     loading?: boolean;
   };
 
