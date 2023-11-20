@@ -37,15 +37,34 @@ View [Composition Docs](./decisions/composition.md) for more info
 
 ### Keep related components together
 
-Multi part components only makes sense when used together, by grouping it we make it explicitly.
+Multi part components only makes sense when used together, by grouping them we make it explicitly on `index.ts`:
+
+```ts
+import { Card as InternalCard } from './card';
+import { CardBadge } from './card-badge';
+import { CardContent } from './card-content';
+import { CardButton } from './card-button';
+
+type InternalCardType = typeof InternalCard;
+export interface ICard extends InternalCardType {
+  Content: typeof CardContent;
+  Badge: typeof CardBadge;
+  Button: typeof CardButton;
+}
+
+export const Card = InternalCard as ICard;
+Card.Badge = CardBadge;
+Card.Content = CardContent;
+Card.Button = CardButton;
+```
+
+Usage becomes:
 
 ```tsx
-export const Card = () => {};
-const CardTitle = () => {};
-const CardButton = () => {};
-
-Card.Title = CardTitle;
-Card.Button = CardButton;
+<Card>
+  <Card.Content />
+  <Card.Button />
+</Card>
 ```
 
 ### Create components like chakra library does
