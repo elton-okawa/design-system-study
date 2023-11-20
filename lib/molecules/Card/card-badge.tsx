@@ -1,4 +1,4 @@
-import { useLoading } from 'lib/core/loading-provider';
+import { useLoading } from 'lib/core/LoadingProvider';
 import { useCardStyles } from './card-context';
 import {
   ComponentWithAs,

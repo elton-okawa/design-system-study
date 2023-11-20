@@ -6,7 +6,7 @@ import {
   useMultiStyleConfig,
   ComponentWithAs,
 } from '@chakra-ui/react';
-import { LoadingProvider } from 'lib/core/loading-provider';
+import { LoadingProvider } from 'lib/core/LoadingProvider';
 import { CardStylesProvider } from './card-context';
 
 export type CardProps = HTMLChakraProps<'div'> &
