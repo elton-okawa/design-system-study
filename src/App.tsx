@@ -11,14 +11,22 @@ function App() {
         count is {count}
       </Button>
 
-      <Stack alignItems="flex-start">
-        <Button variant="rect-primary" isLoading={count % 2 === 0}>
+      <Stack alignItems="center" width="500px">
+        <Button
+          variant="rect-primary"
+          isLoading={count % 2 === 0}
+          alignSelf="flex-start"
+        >
           Test
         </Button>
-        <Button variant="pill-secondary" isLoading={count % 2 === 0}>
+        <Button
+          variant="pill-secondary"
+          isLoading={count % 2 === 0}
+          alignSelf="flex-end"
+        >
           Test
         </Button>
-        <Tile alignSelf="flex-end">
+        <Tile alignSelf="flex-start">
           <p>Super tile</p>
           <p>Hyper tile</p>
         </Tile>
