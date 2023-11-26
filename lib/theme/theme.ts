@@ -2,11 +2,12 @@ import { extendBaseTheme } from '@chakra-ui/react';
 
 import { Colors, foundations } from './foundations';
 import { semanticTokens } from './semantic-tokens';
-import { Components, components } from '../atoms';
+import { Atoms, atoms } from '../atoms';
+import { Molecules, molecules } from '../molecules';
 
 type ArgTypeTheme = {
   colors: Colors;
-  components: Components;
+  components: Atoms & Molecules;
 };
 
 /**
@@ -15,6 +16,6 @@ type ArgTypeTheme = {
  */
 export const theme = extendBaseTheme({
   semanticTokens,
-  components,
+  components: { ...atoms, ...molecules },
   ...foundations,
 }) as ArgTypeTheme;
