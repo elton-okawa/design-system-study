@@ -26,7 +26,7 @@ function App() {
         >
           Test
         </Button>
-        <Tile alignSelf="flex-start">
+        <Tile alignSelf={[null, 'flex-start', 'center', 'flex-end']}>
           <p>Super tile</p>
           <p>Hyper tile</p>
         </Tile>
