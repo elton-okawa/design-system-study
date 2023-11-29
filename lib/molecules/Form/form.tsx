@@ -3,20 +3,20 @@ import {
   ComponentWithAs,
   forwardRef,
   HTMLChakraProps,
-  ThemingProps,
-  useMultiStyleConfig,
 } from '@chakra-ui/react';
-import { FormStylesProvider } from './form-style-context';
+import { useFormContext } from 'react-hook-form';
 
-export type FormProps = HTMLChakraProps<'form'> & ThemingProps<'Form'>;
+export type FormProps = HTMLChakraProps<'form'> & {
+  onSubmit: (values: unknown) => void;
+};
 
 export const Form: ComponentWithAs<'form', FormProps> = forwardRef(
-  ({ size, variant, children, ...rest }, ref) => {
-    const styles = useMultiStyleConfig('Form', { size, variant });
+  ({ children, onSubmit, ...rest }, ref) => {
+    const { handleSubmit } = useFormContext();
 
     return (
-      <chakra.form ref={ref} __css={styles.container} {...rest}>
-        <FormStylesProvider value={styles}>{children}</FormStylesProvider>
+      <chakra.form ref={ref} {...rest} onSubmit={handleSubmit(onSubmit)}>
+        {children}
       </chakra.form>
     );
   },

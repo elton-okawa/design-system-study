@@ -1,13 +1,7 @@
 import { cardTheme } from './Card';
 import { formTheme, formLabelTheme, inputTheme } from './Form';
 
-export {
-  FormControl,
-  FormLabel,
-  FormErrorMessage,
-  FormHelperText,
-  Input,
-} from './Form';
+export { Form } from './Form';
 
 export const molecules = {
   Card: cardTheme,

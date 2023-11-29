@@ -84,5 +84,8 @@
       "import": "./dist/design-system-study.es.js",
       "require": "./dist/design-system-study.umd.js"
     }
+  },
+  "dependencies": {
+    "react-hook-form": "^7.48.2"
   }
 }

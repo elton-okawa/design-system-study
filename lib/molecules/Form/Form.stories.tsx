@@ -2,37 +2,30 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { getThemingArgTypes } from '@chakra-ui/storybook-addon';
 
 import { theme } from 'lib/theme';
-import { FormControl, FormHelperText, FormLabel } from '.';
-import { Input } from '@chakra-ui/react';
+import { Form } from '.';
+import { Button } from 'lib/atoms';
 
 const meta = {
-  component: FormControl,
+  component: Form.Provider,
   tags: ['autodocs'],
   argTypes: getThemingArgTypes(theme, 'Form'),
-} satisfies Meta<typeof FormControl>;
+} satisfies Meta<typeof Form.Provider>;
 
 export default meta;
-type Story = StoryObj<typeof FormControl>;
+type Story = StoryObj<typeof Form.Provider>;
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const Default: Story = {
   render: (args) => {
     return (
-      <FormControl {...args}>
-        <FormLabel>Username</FormLabel>
-        <Input placeholder="Placeholder" />
-        <FormHelperText>Type your username</FormHelperText>
-        {/* <Card.Content
-          title="Heading"
-          description="Paragraph"
-          badge={
-            <Card.Badge>
-              <Box w="3.5rem" h="3.5rem" bgColor="teal.200" />
-            </Card.Badge>
-          }
-        />
-        <Card.Button>Button</Card.Button> */}
-      </FormControl>
+      <Form.Provider {...args}>
+        <Form onSubmit={(values) => console.log(values)}>
+          <Form.Item label="Username" name="username">
+            <Form.Input placeholder="Type a name" name="username" />
+          </Form.Item>
+          <Button type="submit">Submit</Button>
+        </Form>
+      </Form.Provider>
     );
   },
 };
